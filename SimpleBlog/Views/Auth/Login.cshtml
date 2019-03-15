@@ -1,0 +1,40 @@
+﻿
+@model SimpleBlog.ViewModels.AuthLogin
+
+@{
+    ViewBag.Title = "Login";
+
+}
+
+<text>Auth Controller Login</text>
+<p>
+    The value of test in out model is @Model.Test
+</p>
+
+<p>Post Index</p>
+<p>@Html.RouteLink("Click Here", "Home") to go home!</p>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+
+    <div>
+        @Html.LabelFor(x => x.UserName)
+        @Html.EditorFor(x => x.UserName)
+
+    </div>
+
+    <div>
+        @Html.LabelFor(x => x.Password)
+        @Html.EditorFor(x => x.Password)
+
+    </div>
+
+    <div>
+        <input class="btn btn-primary " type="submit" value="login" />
+    </div>
+
+}
+
+<h2>Login</h2>
+

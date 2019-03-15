@@ -1,0 +1,50 @@
+﻿
+@model SimpleBlog.ViewModels.RegisterRegister
+
+@{
+    ViewBag.Title = "Register";
+
+}
+
+<text>Register Controller Register</text>
+@*<p>
+        The value of test in out model is @Model.Test
+    </p>*@
+
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+
+    <div>
+        @Html.LabelFor(x => x.StudentNumber)
+        @Html.EditorFor(x => x.StudentNumber)
+
+    </div>
+
+    <div>
+        @Html.LabelFor(x => x.Name)
+        @Html.EditorFor(x => x.Name)
+
+    </div>
+
+    <div>
+        @Html.LabelFor(x => x.SurName)
+        @Html.EditorFor(x => x.SurName)
+
+    </div>
+
+    <div>
+        @Html.LabelFor(x => x.Email)
+        @Html.EditorFor(x => x.Email)
+
+    </div>
+
+    <div>
+        <input class="btn btn-primary " type="submit" value="register" />
+    </div>
+
+}
+
+<h2>Register</h2>
+
